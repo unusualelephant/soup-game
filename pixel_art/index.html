@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soup Game</title>
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color:rgb(255, 255, 235); 
+            color:rgb(61, 61, 61);
+            padding:2px;
+            margin:1%;
+           
+        }
+    body {
+            border: pink solid 2px;
+            background-color:pink;
+            border-radius:100px;
+           
+        }
+        button {
+            color:rgb(59, 59, 59);
+            background-color:rgb(255, 165, 180);
+            border: none;
+            border-radius:200px;
+            height:50px;
+            width:100px;
+        }
+        button:hover {
+            background-color:rgb(255, 142, 161);
+            color:black;
+        }
+        button:active {
+            color:white;
+        }
+        @media screen and (min-width: 768px) {
+            html {
+                font-size: 125%;
+            }
+        }
+@media screen and (min-width: 992px) {
+  html {
+    margin-left:25%;
+    margin-right:25%;
+    
+  }
+}
+
+    </style>
+    <script>
+        // make an array with the list of fruits and vegetables we have and make it so that each time a new customer comes in, three random items are selected from the array.
+        //when the play button is clicked, display the three random items in an alert. 
+        // Change the alert to show up in a text box above the customer. 
+        
+          
+    function intro() {
+    // setTimeout(() => {
+        let stranger = document.getElementById("img")
+        let position = 100
+        stranger.style.position = "absolute"
+       // stranger.setAttribute("src", "pixel_art/unicorn.png")
+       stranger.setAttribute("src", "dryad.png")
+        stranger.style.height = 600 + "px"
+        stranger.style.top = 30 + "%"
+        stranger.style.right = position + "%"
+        document.body.appendChild(stranger)
+        let movein = setInterval(() => {
+            position -= 1
+            stranger.style.right = position + "%"
+            if (position == 35) {
+                clearInterval(movein)
+                let txtbox = document.getElementById("txtbox")
+                let name = document.getElementById("name")
+                let msg = document.getElementById("msg")
+                let nxt = document.getElementById("nxt")
+                txtbox.style.display = "block"
+                
+             //   function order(){
+
+                    const items = ["apple" , "banana" , "carrot" , "broccoli" , "orange" , "grape" , "lettuce" , "apple"];
+                    let three_food = items.sort(() => 0.5 - Math.random()).slice(0 , 3);
+             //       }
+                    name.innerHTML = "Can I have a soup with these ingredients: " + three_food +" ?";
+                    three_food = food.inner.HTML
+                txt = "Hey."
+                typeWriter()
+                
+                nxt.addEventListener("click", function() {
+                    i = 0
+                    msg.innerHTML = ""
+                    txt = "test"
+                    typeWriter()
+                })
+            }
+            if (position !== 35) {
+                // Do something when the position is not 35
+            }
+        }, 50);
+    // }, 2000);
+    }
+
+function typeWriter() {
+    let nxt = document.getElementById("nxt")
+    if (i < txt.length) {
+        document.getElementById("msg").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+    alert("re")
+    nxt.style.display = "block"
+}
+    
+    </script>
+</head>
+<body>
+<section>
+    <div>
+        <h1>Welcome to the soup game!</h1>
+        <div>
+            <button onclick="order()">Play</button>
+            <button onclick="intro()">Intro</button>
+            <button>Settings</button>
+            <button onclick="typeWriter()">Type Writer</button>
+            <button id="nxt">Next</button>
+            <div>
+                <img src="dryad.png" id="img">
+            </div>
+        </div>
+        <div id="txtbox" style="display: none; border: 2px solid black; padding: 20px; margin-top: 20px; background-color: white; border-radius:200px;">
+            <div id="name" style="font-weight: bold; font-size:30px;"></div>
+            <div id="msg" style="margin-top: 10px; min-height: 50px;"></div>
+            <div id="food" style="color:red;"></div>
+           
+        </div>
+    </div>
+</section>
+</body>
+</html>

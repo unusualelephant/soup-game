@@ -48,40 +48,37 @@
   }
 
 }
-img {
+.images {
     display:none;
 }
 
     </style>
     <script>
-        // make an array with the list of fruits and vegetables we have and make it so that each time a new customer comes in, three random items are selected from the array.
-        //when the play button is clicked, display the three random items in an alert. 
+        
+      
         // Change the alert to show up in a text box above the customer. 
         // make dice for 6 characters 
       
           const charas = [
                 'url("dryad.png")','url("harpy.png")','url("gnome.png")','url("mermaid.png")','url("unicorn.png")','url("fairy.png")'
             ];
-            const chara = document.querySelector('section');
-
             function showImage(){
-
                 var a = Math.floor(Math.random() * charas.length);
-                var img = charas[a];
-                pic.style.backgroundImage = img;
+                var chara = charas[a];
+                document.getElementById() = chara;
             }
-            setInterval(showImage, 1000);
+            
         
 
 
           
-    function intro() {
-    // setTimeout(() => {
+    function intro(){
+        showImage(); 
+
         let stranger = document.getElementById("img")
         let position = 100
         stranger.style.position = "absolute"
-       // stranger.setAttribute("src", "pixel_art/unicorn.png")
-       stranger.setAttribute("src", "dryad.png")
+        stranger.setAttribute("src", "dryad.png");
         stranger.style.height = 600 + "px"
         stranger.style.top = 30 + "%"
         stranger.style.right = position + "%"
@@ -97,8 +94,8 @@ img {
                 let nxt = document.getElementById("nxt")
                 txtbox.style.display = "block"
                 
-             //   function order(){
-                let ingredients = ['apple', 'lemon', 'avocado', 'orange', 'banana', 'pineapple', 'kiwi', 'strawberry', 'pepper', 'carrot', 'tomato', 'potato', 'mushroom', 'broccoli', 'lettuce', 'cucumber'];
+            
+        let ingredients = ['apple', 'lemon', 'avocado', 'orange', 'banana', 'pineapple', 'kiwi', 'strawberry', 'pepper', 'carrot', 'tomato', 'potato', 'mushroom', 'broccoli', 'lettuce', 'cucumber'];
         let rnding, ing1, ing2, ing3; // random ingredient index and the three ingredients that the customer wants
         for (let i = 0; i < 3; i++){
         rnding = Math.floor(Math.random() * ingredients.length);
@@ -213,10 +210,9 @@ function order(){
             <button onclick="order()">Take Order</button>
             <button onclick="intro()">Intro</button>
             <button onclick="character()">Character Test</button>
-           
-           
-            <div>
-                <img src="dryad.png" id="img">
+  
+                <img src="dryad.png" id="dryad">
+                   <div class="images">
                 <img src="harpy.png" id="harpy">
                 <img src="gnome.png" id="gnome">
                 <img src="mermaid.png" id="mermaid">

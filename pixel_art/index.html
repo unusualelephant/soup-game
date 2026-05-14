@@ -46,6 +46,10 @@
     margin-right:25%;
     
   }
+
+}
+img {
+    display:none;
 }
 
     </style>
@@ -53,7 +57,23 @@
         // make an array with the list of fruits and vegetables we have and make it so that each time a new customer comes in, three random items are selected from the array.
         //when the play button is clicked, display the three random items in an alert. 
         // Change the alert to show up in a text box above the customer. 
+        // make dice for 6 characters 
+      
+          const charas = [
+                'url("dryad.png")','url("harpy.png")','url("gnome.png")','url("mermaid.png")','url("unicorn.png")','url("fairy.png")'
+            ];
+            const chara = document.querySelector('section');
+
+            function showImage(){
+
+                var a = Math.floor(Math.random() * charas.length);
+                var img = charas[a];
+                pic.style.backgroundImage = img;
+            }
+            setInterval(showImage, 1000);
         
+
+
           
     function intro() {
     // setTimeout(() => {
@@ -178,6 +198,10 @@ function typeWriter() {
     alert("re")
     nxt.style.display = "block"
 }
+function order(){
+     
+    
+}
     
     </script>
 </head>
@@ -186,19 +210,24 @@ function typeWriter() {
     <div>
         <h1>Welcome to the soup game!</h1>
         <div>
-            <button onclick="order()">Play</button>
+            <button onclick="order()">Take Order</button>
             <button onclick="intro()">Intro</button>
-            <button>Settings</button>
-            <button onclick="typeWriter()">Type Writer</button>
-            <button id="nxt">Next</button>
+            <button onclick="character()">Character Test</button>
+           
+           
             <div>
                 <img src="dryad.png" id="img">
+                <img src="harpy.png" id="harpy">
+                <img src="gnome.png" id="gnome">
+                <img src="mermaid.png" id="mermaid">
+                <img src="unicorn.png" id="unicorn">
+                <img src="fairy.png" id="fairy">
             </div>
         </div>
         <div id="txtbox" style="display: none; border: 2px solid black; padding: 20px; margin-top: 20px; background-color: white; border-radius:200px;">
             <div id="name" style="font-weight: bold; font-size:30px;"></div>
             <div id="msg" style="margin-top: 10px; min-height: 50px;"></div>
-            <div id="food" style="color:red;"></div>
+            <div id="food" style="color:rgb(0, 0, 0);"></div>
            
         </div>
     </div>

@@ -78,12 +78,79 @@
                 txtbox.style.display = "block"
                 
              //   function order(){
-
-                    const items = ["apple" , "banana" , "carrot" , "broccoli" , "orange" , "grape" , "lettuce" , "apple"];
+                let ingredients = ['apple', 'lemon', 'avocado', 'orange', 'banana', 'pineapple', 'kiwi', 'strawberry', 'pepper', 'carrot', 'tomato', 'potato', 'mushroom', 'broccoli', 'lettuce', 'cucumber'];
+        let rnding, ing1, ing2, ing3; // random ingredient index and the three ingredients that the customer wants
+        for (let i = 0; i < 3; i++){
+        rnding = Math.floor(Math.random() * ingredients.length);
+        switch (rnding){
+            case 0:
+                console.log(ingredients[0]);
+                break;
+            case 1:
+                console.log(ingredients[1]);
+                break;
+            case 2:
+                console.log(ingredients[2]);
+                break;
+            case 3:
+                console.log(ingredients[3]);
+                break;
+            case 4:
+                console.log(ingredients[4]);
+                break;
+            case 5:
+                console.log(ingredients[5]);
+                break;
+            case 6:
+                console.log(ingredients[6]);
+                break;
+            case 7:
+                console.log(ingredients[7]);
+                break;
+            case 8:
+                console.log(ingredients[8]);
+                break;
+            case 9:
+                console.log(ingredients[9]);
+                break;
+            case 10:
+                console.log(ingredients[10]);
+                break;
+            case 11:
+                console.log(ingredients[11]);
+                break;
+            case 12:
+                console.log(ingredients[12]);
+                break;
+            case 13:
+                console.log(ingredients[13]);
+                break;
+            case 14:
+                console.log(ingredients[14]);
+                break;
+            case 15:
+                console.log(ingredients[15]);
+                break;
+            default:
+                console.log('Error: Invalid ingredient index');
+        }
+        if (i == 0){
+            ing1 = ingredients[rnding]; // assign the first ingredient to ing1
+        } else if (i == 1){
+            ing2 = ingredients[rnding]; // assign the second ingredient to ing2
+        } else if (i == 2){
+            ing3 = ingredients[rnding]; // assign the third ingredient to ing3, all three will be used later to compare ingredients used by the player to the customer order
+        }
+    }  
+    food.innerHTML = ing1 + ", " + ing2 + ", " + ing3;
+             /*       const items = ["apple" , "banana" , "carrot" , "broccoli" , "orange" , "grape" , "lettuce" , "apple"];
                     let three_food = items.sort(() => 0.5 - Math.random()).slice(0 , 3);
              //       }
                     name.innerHTML = "Can I have a soup with these ingredients: " + three_food +" ?";
                     three_food = food.inner.HTML
+                   
+                    */
+                   
                 txt = "Hey."
                 typeWriter()
                 

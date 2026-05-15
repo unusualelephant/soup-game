@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Soup Game</title>
     <style>
-      
-
     </style>
     <script>
         let customer = { // initializing the customer object with a name, image, and an empty order array that will be filled with the three random ingredients that the customer wants
@@ -14,7 +13,7 @@
             image: 'customer.png',
             order: []
         };
-        images = ['url("dryad.png")','url("harpy.png")','url("gnome.png")','url("mermaid.png")','url("unicorn.png")','url("fairy.png")'];
+        images = ['dryad.png','harpy.png','gnome.png','mermaid.png','unicorn.png','fairy.png'];
         names = ['Dryad', 'Harpy', 'Gnome', 'Mermaid', 'Unicorn', 'Fairy'];
         for (let i = 0; i < 2; i++){
             if (i == 0){
@@ -90,13 +89,23 @@
         }  
         console.log(ing1, ing2, ing3);
         customer.order.push(ing1, ing2, ing3); // add the three random ingredients to the customer's order array
-        console.log();
-
+        
+        window.addEventListener('DOMContentLoaded', function() {
+            let customer_image = document.getElementById('customer-image');
+            let customer_name = document.getElementById('customer-name');
+            let customer_order = document.getElementById('customer-order');
+            customer_image.src = customer.image;
+            customer_name.textContent = customer.name;
+            customer_order.textContent = 'Order: ' + customer.order.join(', ');
+        });
+        
     </script>
 </head>
 <body>
-<section>
-
-</section>
+    <div id="customer">
+        <h2 id="customer-name"></h2>
+        <img src="" id="customer-image">
+        <p id="customer-order"></p>
+    </div>
 </body>
 </html>

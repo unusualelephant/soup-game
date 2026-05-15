@@ -57,10 +57,9 @@
                 height: 45px;
             }
         }
-        image {
+        .table {
             width: 100%;
             height: auto;
-            background-image: url("table.png");
             float: left;
         }
 

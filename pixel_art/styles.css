@@ -56,13 +56,11 @@
                 width: 90px;
                 height: 45px;
             }
+            .table {
+                width: 10px;
+                float:left;
+            }
         }
-        .table {
-            width: 100%;
-            height: auto;
-            float: left;
-        }
-
 
 
 

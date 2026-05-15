@@ -16,14 +16,10 @@
         };
         images = ['dryad.png','harpy.png','gnome.png','mermaid.png','unicorn.png','fairy.png'];
         names = ['Dryad', 'Harpy', 'Gnome', 'Mermaid', 'Unicorn', 'Fairy'];
-        for (let i = 0; i < 2; i++){
-            if (i == 0){
-                customer.name = names[Math.floor(Math.random() * names.length)]; // assign a random character name to the customer
-            }
-            if (i == 1){
-                customer.image = images[Math.floor(Math.random() * images.length)]; // assign a random character image to the customer
-            }
-        }
+        rndcustomer = Math.floor(Math.random() * images.length);
+        customer.image = images[rndcustomer]; // assign a random character image to the customer
+        customer.name = names[rndcustomer]; // assign a random character name to the customer, the name and image will always match because they are in the same order in their respective arrays
+
         let ingredients = ['apple', 'lemon', 'avocado', 'orange', 'banana', 'pineapple', 'kiwi', 'strawberry', 'pepper', 'carrot', 'tomato', 'potato', 'mushroom', 'broccoli', 'lettuce', 'cucumber'];
         let rnding, ing1, ing2, ing3; // random ingredient index and the three ingredients that the customer wants
         for (let i = 0; i < 3; i++){

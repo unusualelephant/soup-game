@@ -4,7 +4,7 @@
             background-color: rgb(0, 0, 0);
             color: rgb(61, 61, 61);
             padding: 2px;
-            margin-left: 5px;
+            margin-left: 150px;
             margin-right: 5px;
             margin-bottom: 10px;
             margin-top: 10px;
@@ -17,6 +17,7 @@
         body {
             min-height: 100vh;
             margin: 0;
+            margin-left: 50px;
             padding: 0;
         }
         button {
@@ -56,3 +57,17 @@
                 height: 45px;
             }
         }
+        image {
+            width: 100%;
+            height: auto;
+            background-image: url("table.png");
+            float: left;
+        }
+
+
+
+
+
+
+
+

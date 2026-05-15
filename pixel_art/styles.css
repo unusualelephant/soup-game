@@ -7,6 +7,20 @@
  }
  body {
     text-align:center;
+    margin-top:80px;
+ }
+ #nav {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color:rgb(40, 40, 40);
+    padding:15px;
+    z-index:1000;
+    box-shadow:0 2px 5px rgba(0,0,0,0.5);
+    display:flex;
+    justify-content:center;
+    gap:20px;
  }
  .box {
     border:rgb(255, 255, 255) solid 2px;
@@ -40,6 +54,17 @@
     background-color:rgb(255, 255, 255);
     color:black;
     opacity:75%;
+ }
+ #home-button, #play-button {
+    background-color:rgb(255, 255, 255);
+    color:black;
+    border-radius:15px;
+    border: solid black 2px;
+    border-width:10px;
+    font-size:24px;
+    font-weight:bold;
+    padding:10px 20px;
+    margin:10px;
  }
 
 

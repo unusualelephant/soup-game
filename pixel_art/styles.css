@@ -39,17 +39,11 @@
             html {
                 font-size: 125%;
             }
-            .table {
-                width: 800px;
-            }
         }
         @media screen and (min-width: 992px) {
             html {
                 margin-left:25%;
                 margin-right:25%;
-            }
-            .table {
-                width: 1000px;
             }
         }
         @media screen and (max-width: 600px) {
@@ -62,15 +56,13 @@
                 width: 90px;
                 height: 45px;
             }
-            .table {
-                width: 100%;
-                float: none;
-            }
-            
         }
         .table {
-                width: 1000px;
-                float:left;
+                width:500px;
+                position:absolute;
+                margin-right: 100px;
+
+
             }
 
 

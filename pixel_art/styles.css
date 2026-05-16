@@ -72,6 +72,9 @@
     border: solid black 2px;
     border-width:10px;
     height:70px;
+    z-index:200px;
+    margin-bottom:10px;
+    margin-top:-50px;
  }
  #customer-name {
     font-size:42px;
@@ -84,12 +87,23 @@
     background-color:rgb(0, 0, 0);
     color:rgb(255, 255, 255);
     border-radius:15px;
-    border: solid rgb(255, 255, 255) 2px;
-    border-width:5px;
+    border: solid rgb(255, 255, 255) 4px;
+    border-width:2px;
+    height:50px;
+    width:100px;
     font-size:20px;
     font-weight:bold;
     padding:5px 10px;
     margin:10px;
+ }
+ #home-button:hover, #play-button:hover {
+    background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+ }
+ #logo {
+      height:100px;
+      width:100px;
+      margin-right:10px;
  }
 
 

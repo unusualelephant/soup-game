@@ -83,7 +83,7 @@
     color:black;
     opacity:75%;
  }
- #home-button, #play-button {
+ #home-button, #play-button, #cook-button {
     background-color:rgb(0, 0, 0);
     color:rgb(255, 255, 255);
     border-radius:15px;
@@ -96,7 +96,7 @@
     padding:5px 10px;
     margin:10px;
  }
- #home-button:hover, #play-button:hover {
+ #home-button:hover, #play-button:hover, #cook-button:hover {
     background-color:rgb(255, 255, 255);
     color:rgb(0, 0, 0);
  }
@@ -105,6 +105,40 @@
       width:100px;
       margin-right:10px;
  }
+
+      /* make a button that clears the character and name but moves the order to like.... somewhere else? so that the next page has the cauldren and the fruits and vegetables in the table */
+.ingredient {
+   height:30px;
+}
+#ingredients {
+   display:flex;
+   flex-wrap: wrap;
+   width:50px;
+   gap:2px;
+   
+}
+#ladle {
+   height:200px;
+   position:absolute;
+}
+#cauldron {
+   height:500px;
+   margin:0;
+   margin-left:95px;
+   margin-top:50px;
+   margin-bottom:-20px;
+}
+#fire-gif {
+   height:130px;
+}
+#table {
+   height:300px;
+   position:absolute;
+   right:100%;
+   margin:0;
+   margin-top:-350px;
+}
+
 
 
 

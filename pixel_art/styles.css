@@ -124,12 +124,14 @@
 #cauldron {
    height:500px;
    margin:0;
-   margin-left:95px;
-   margin-top:50px;
-   margin-bottom:-20px;
+   margin-left:-170px;
+   margin-top:60px;
+   margin-bottom:-50px;
+   position:absolute;
 }
 #fire-gif {
    height:130px;
+   position:absolute;
 }
 #table {
    height:300px;

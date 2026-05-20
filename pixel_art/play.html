@@ -96,6 +96,26 @@
             customer_name.textContent = customer.name;
             customer_order.textContent = 'Order: ' + customer.order.join(', ');
         });
+
+
+
+        function cook(){
+            // hide the character image
+            // display a message that fades out that says 'cook their order' and behind that, the time bar and yummy bar shows up
+            // display the cauldron and the box of ingredients on 'next' button click
+               var x = document.getElementById("cauldron");
+               var y = document.getElementById("ingredients");
+               
+  if (x.style.display === "none" || y.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "block";
+
+  } else {
+    x.style.display = "none";
+    y.style.display = "none";
+  }
+
+        }
     </script>
 </head>
 <body>
@@ -113,6 +133,26 @@
         <div id="customer">
             <h2 id="customer-name"></h2>
             <img src=""                 id="customer-image">
+            <div>
+                <div id="cauldron" style="display:none;">
+                <img src="cauldron.png">
+                </div>
+                <div id="ingredients" style="display:none;">
+                    <img src="apple_asset.png" class="ingredient">
+                    <img src="lemon_asset.png" class="ingredient">
+                    <img src="avocado_asset.png" class="ingredient">
+                    <img src="orange_asset.png" class="ingredient">
+                    <img src="banana_asset.png" class="ingredient">
+                    <img src="pineapple_asset.png" class="ingredient">
+                    <img src="carrot_asset.png" class="ingredient">
+                    <img src="strawberry_asset.png" class="ingredient">
+                    <img src="pepper_asset.png" class="ingredient">
+                    <img src="tomato_asset.png" class="ingredient">
+                    <img src="potato_asset.png" class="ingredient">
+                    <img src="mushroom_asset.png" class="ingredient">
+            </div>
+            <button id="next-button" onclick="cook()">Next</button>
+             <p id="msg"></p>
             <p id="customer-order"></p>
         </div>
     </div>
